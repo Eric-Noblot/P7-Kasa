@@ -1,0 +1,21 @@
+.navContainer {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    color: #FF6060;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.navLogo {
+    margin-right: auto;
+}
+
+.nav-active{
+    text-decoration: none;
+    margin-right: 15px;
+    border-bottom: 1px solid #FF6060;
+    color: #FF6060;
+}
