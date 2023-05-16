@@ -1,0 +1,27 @@
+.banner{
+    margin: 50px 0;
+    max-width: 1240px;
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerHome{
+    background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/background_header.jpg");
+    .bannerText {
+        color: white;
+        z-index: 1;
+    }
+}
+
+.bannerAbout{
+    background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/background_about.jpg");
+    .bannerText {
+        display: none;
+    }
+}
+

@@ -1,14 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "../pages/Home"
 import About from "../pages/About"
+import Error from "../components/Error/Error"
 import "../styles/pages/app.scss"
 
 function App() {
   return (
     <Router>
       <Routes>
-      <Route path ="/" element ={<Home />} />
-      <Route path = "/about" element={<About />} />
+        <Route path = "/" element ={<Home />} />
+        <Route path = "/about" element={<About />} />
+        <Route path = "*" element ={<Error />} />
       </Routes>
     </Router>
   );

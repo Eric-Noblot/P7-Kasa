@@ -1,13 +1,13 @@
 import React from 'react';
 import "../../styles/components/Header/header.scss"
 import NavBar from "./NavBar"
-import Title from "./Title"
+import Banner from "./Banner"
 
 const Header = () => {
     return (    
         <div className = "header">
             <NavBar />
-            <Title />
+            <Banner />
         </div>
     );
 };
