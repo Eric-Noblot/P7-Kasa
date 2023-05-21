@@ -8,7 +8,7 @@ console.log("title", title)
 
   return (
     <div className="card">
-      {/* <img src={cover} alt={title} className="card_img"></img> */}
+      <img src={cover} alt={title} className="card_img"></img>
       <p className="title_card">{title}</p>
     </div>
   );
