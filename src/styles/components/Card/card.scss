@@ -1,0 +1,29 @@
+.card_container {
+    width : 100%;
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    height: 340px;
+    width: 340px;
+     background-image: linear-gradient(rgba(255, 96, 96, 1), rgba(156, 44, 44, 0.9));
+    //, url("../../../assets/img/background_header.jpg");
+    border-radius: 10px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.card_img{
+    background-size: cover;
+    height: 340px;
+    width: 340px;
+    border-radius: 10px;
+}
+
+.title_card{
+    color: white;
+}
