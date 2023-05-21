@@ -18,7 +18,7 @@ const Banner = () => {
 
     return (
         <div>
-             <div className = {aboutPage ? "bannerAbout banner" : "bannerHome banner"}>
+             <div className = {aboutPage ? "banner_about banner" : "banner_home banner"}>
                 <h1 className = "banner_text">Chez vous, partout ou ailleurs</h1>
             </div>
         </div>

@@ -10,16 +10,16 @@
     align-items: center;
 }
 
-.bannerHome{
+.banner_home{
     background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_header.jpg");
     .banner_text {
         color: white;
         font-size: 48px;
-        font-weight: 500;
+        font-weight: 500;   
     }
 }
 
-.bannerAbout{
+.banner_about{
     background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_about.jpg");
     .banner_text {
         display: none;
