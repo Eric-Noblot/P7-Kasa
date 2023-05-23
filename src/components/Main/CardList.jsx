@@ -1,16 +1,17 @@
 import React from "react";
 import "../../styles/components/Card/card.scss"
-import datas from "../../assets/data/data.json"
+//import datas from "../../assets/data/data.json"
 import Card from "./Card"
 
-const CardList = () => {
-  return (
-    <div className= "card_container">
-        {datas.map(({id, title, cover}) => 
+const CardList = ({datas}) => { //jai du mettre {} sinon data etait un objet dans un tableau et mon .map pop une erreur
 
+  console.log("3", datas)
+  return (
+    <main className= "card_container">
+        {datas.map(({id, title, cover}) => 
          <Card key= {id} id={id} title={title} cover={cover}/>
             )}
-    </div>
+    </main>
   )
 }
 

@@ -1,0 +1,25 @@
+.footer_container {
+    width: 100%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer_img{
+    // background-image: url("../../../assets/img/logo_noir.webp");
+    height: 45px;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer_text{
+    color: white;
+}

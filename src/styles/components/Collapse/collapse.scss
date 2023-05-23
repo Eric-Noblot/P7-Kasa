@@ -1,0 +1,21 @@
+.collapse{
+height: 50px;
+width: 70%;
+background-color: red;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+text-align: center;
+padding: 0 25px;
+}
+
+.collapse_text {
+    // color: white;
+    // font-weight: 500;
+    // margin: 0
+}
+.collapse_img {
+    height: 20px;
+    width: 28px;
+    margin-top: 14px;
+}

@@ -2,9 +2,9 @@ import React from "react";
 import "../../styles/components/Card/card.scss"
 
 const Card = ({id, cover, title}) => {
-console.log("id", id)
-console.log("cover", cover)
-console.log("title", title)
+// console.log("id", id)
+// console.log("cover", cover)
+// console.log("title", title)
 
   return (
     <div className="card">
