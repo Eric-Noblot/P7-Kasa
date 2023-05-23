@@ -1,21 +1,43 @@
-.collapse{
+.collapse_container{
+    max-width: 70%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.collapse_box{
 height: 50px;
-width: 70%;
-background-color: red;
+width: 100%;
+background-color: #FF6060;
 border-radius: 5px;
 display: flex;
 justify-content: space-between;
 text-align: center;
-padding: 0 25px;
+padding: 0 30px;
+cursor: pointer;
 }
 
 .collapse_text {
-    // color: white;
-    // font-weight: 500;
-    // margin: 0
+    color: white;
+    font-weight: 500;
+    margin-top: 11px;
+
 }
 .collapse_img {
     height: 20px;
     width: 28px;
-    margin-top: 14px;
+    margin-top: 16px;
+}
+
+.collapse_description {
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+    color: #FF6060;
+    // transition-duration: 2000ms;
 }

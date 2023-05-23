@@ -10,16 +10,24 @@ const Home = () => {
     const [isDataLoading, setDataLoading] = useState(false)
 
     useEffect(() => {
-        setDataLoading(true)
+        // setDataLoading(true)
 
             fetch("http://localhost:3000/data/data.json")
             .then(res => res.json())
             .then(data => setAppartments(data))
-            setDataLoading(true)
+            // setDataLoading(true)
             .catch(error => "Erreur de connexion avec l'API " + error)    
 
     },[])
-    
+//     useEffect(() => {
+//     setDataLoading(true)
+//     fetch("http://localhost:3000/data/data.json")
+//     .then((response) => response.json())
+//     .then(({ surveyData }) => {
+//     setSurveyData(surveyData)
+//     setDataLoading(false)
+//     })
+// }, [])
     return (
         <div>
             <Header />
