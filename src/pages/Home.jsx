@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import Header from "../components/Header/Header"
-import CardList from "../components/Main/CardList"
+import CardList from "../components/Card/CardList"
 import Footer from "../components/Footer/Footer"
 // import Loader from "../components/Loader/Loader"
 

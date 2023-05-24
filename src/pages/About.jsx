@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      {aboutCollapseDatas.map((data,index ) => (
+      {aboutCollapseDatas.map((data, index ) => (
         <Collapse key={index} title={data.title} description={data.description} />
       ))}
       <Footer />
