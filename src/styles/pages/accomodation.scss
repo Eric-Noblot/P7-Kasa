@@ -1,111 +1,107 @@
-.accomodation_box_img{
-    height: 415px;
-    width: 100%;
-    position: relative;
-    border-radius: 25px;
-}
-
-.accomodation_img{
-    background-image: url("../../assets/img/background_about.jpg");
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    border-radius: 25px;
-}
-
-.fleche_gauche{
-    background-image: url("../../assets/img/fleche_gauche.png");
-    height: 80px;
-    width: 46px;
-    position: absolute;
-    top: 170px;
-    left: 50px;
-}
-
-.fleche_droite{
-    background-image: url("../../assets/img/fleche_droite.png");
-    height: 80px;
-    width: 46px;
-    position: absolute;
-    top: 170px;
-    right: 50px;
-
-}
-
-.accomodation_numbers{
-    color: white;
-    text-align: center;
-    margin-top: 350px;
-    font-size: 18px;
-    font-weight: 500;    
-}
-
-//text
-.accomodation_box_text{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    margin-top: 40px;
-    border: 1px solid black;
-}
-
-.accomodation_text{
-
-    h2{
-        color: #FF6060;
-        font-weight: 500;
-        font-size: 36px;
-        margin: 0;
+.accomodation {
+    margin: 50px 0;
+    &__box_img{
+        height: 415px;
+        width: 100%;
+        position: relative;
+        border-radius: 25px;
     }
-    h3{
+    &__img{
+        background-image: url("../../assets/img/background_about.jpg");
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        border-radius: 25px;
+    }
+    .fleche_gauche{
+        background-image: url("../../assets/img/fleche_gauche.png");
+        height: 80px;
+        width: 46px;
+        position: absolute;
+        top: 170px;
+        left: 50px;
+    }
+    .fleche_droite{
+        background-image: url("../../assets/img/fleche_droite.png");
+        height: 80px;
+        width: 46px;
+        position: absolute;
+        top: 170px;
+        right: 50px;
+    }
+    &__numbers{
+        color: white;
+        text-align: center;
+        margin-top: 350px;
+        font-size: 18px;
+        font-weight: 500;    
+    }
+    &__box_text{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+    &__text{
+        h2{
+            color: #FF6060;
+            font-weight: 500;
+            font-size: 36px;
+            margin: 0;
+        }
+        h3{
+            color: #FF6060;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        button{
+            background-color: #FF6060;
+            border: none;
+            border-radius: 10px;
+            height: 25px;
+            width: 125px;
+            margin-right: 20px;
+            color: white;
+        }
+    }
+    &__box_user{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px;
+    }
+    &__name_user {
         color: #FF6060;
         font-weight: 500;
         font-size: 18px;
+        width: 80px;
+        // border: 1px solid blue;
+        text-align: end;
+        margin-right: 15px;
         margin-top: 10px;
     }
-    button{
-        background-color: #FF6060;
-        border: none;
-        border-radius: 10px;
-        height: 25px;
-        width: 115px;
-        margin-right: 20px;
+    &__img_user {
+        height: 64px;
+        width: 64px;
+        border-radius: 50%; 
+        margin-left: 25px;
     }
-}
-
-.accomodation_user{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px;
-}
-
-.accomodation_name_user {
-    color: #FF6060;
-    font-weight: 500;
-    font-size: 18px;
-
-    border: 1px solid blue;
-    text-align: end;
-    margin-right: 15px;
-}
-
-.accomodation_img_user {
-    height: 64px;
-    width: 64px;
-    border-radius: 50%;
-    background-color: red;
-
-}
-
-.accomodation_ratings {
-    font-size: 2rem;
-    grid-column: 1/3;
-    width: 100%;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
+    &__ratings {
+        font-size: 2rem;
+        grid-column: 1/3;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__collapse{
+        display: flex;
+        justify-content: space-between;
+        // width: 100%;
+        gap: 20px;
+    }
 }
 
 .star{
@@ -113,9 +109,20 @@
     width: 25px;
 }
 
-.accomodation_collapse{
-    display: flex;
-    justify-content: space-between;
-    // width: 100%;
-    border: 2px solid gold;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

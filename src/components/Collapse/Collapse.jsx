@@ -5,6 +5,16 @@ import topArrow from "../../assets/img/fleche_haut.png";
 
 const Collapse = ({page, title, description}) => {
 
+  // let resultat = description.map((el) => {
+  //   console.log(el)
+  // })
+
+
+  // const equipmentsArray = []
+  // equipmentsArray = description.map(() =>{
+  //   console.log(equipmentsArray)
+  // })
+
   const [isOpen, setIsOpen] = useState(false)
   
   return (

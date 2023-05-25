@@ -1,22 +1,20 @@
-.navContainer {
+.nav {
     display: flex;
     align-items: center;
+    &__link {
+        color: #FF6060;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+    &__logo {
+        margin-right: auto;
+        padding-right: 10px;
+    }
+    &__active{
+        text-decoration: none;
+        margin-right: 15px;
+        border-bottom: 2px solid #FF6060;
+        color: #FF6060;
+    }
 }
 
-.navLink {
-    color: #FF6060;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-.navLogo {
-    margin-right: auto;
-    padding-right: 10px;
-}
-
-.nav_active{
-    text-decoration: none;
-    margin-right: 15px;
-    border-bottom: 2px solid #FF6060;
-    color: #FF6060;
-}

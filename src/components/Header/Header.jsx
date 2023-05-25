@@ -6,7 +6,7 @@ import Banner from "./Banner"
 const Header = () => {
     return (    
         <div className = "header">
-            <NavBar />
+            
             <Banner />
         </div>
     );

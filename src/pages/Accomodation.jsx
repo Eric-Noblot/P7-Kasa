@@ -3,30 +3,37 @@ import "../styles/pages/accomodation.scss";
 import redStar from "../assets/img/red_star.png"
 import greyStar from "../assets/img/grey_star.png"
 import Collapse from "../components/Collapse/Collapse"
-import { useEffect } from "react";
+// import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-const Accomodation = () => {
+
+const Accomodation = ({datas}) => {
+
+  const idAccomodation  = useParams().id;
+  const accomodation = datas.find(element => element.id === idAccomodation)
 
 
   return (
-    <div className="accomodation_container">
-      <div className="accomodation_box_img">
-        <div className="accomodation_img">
+    <div className="accomodation">
+      <div className="accomodation__box_img">
+        <div className="accomodation__img">
           <div className="fleche_gauche"></div>
           <div className="fleche_droite"></div>
-          <div className="accomodation_numbers">1/5</div>
+          <div className="accomodation__numbers">1/5</div>
         </div>
       </div>
-      <div className = "accomodation_box_text">
-        <div className="accomodation_text">
-            <h2 className="accomodation_title">Cosy loft on the Canal Saint Martin</h2>
-            <h3 className="accomodation_location">Paris, Ile de France</h3>
-            <button type = "button" className="accomodation_button">boutons</button>
+      <div className = "accomodation__box_text">
+        <div className="accomodation__text">
+            <h2>{accomodation.title}</h2>
+            <h3>{accomodation.location}</h3>
+            {accomodation.tags.map((tag)  => (
+              <button type = "button" className="accomodation__button">{tag}</button>
+            ))}
         </div>
-        <div className ="accomodation_user">
-            <div className="accomodation_name_user">Nathalievd Jean</div>
-            <img className="accomodation_img_user" src = "" alt ="" />
-            <div className="accomodation_ratings">
+        <div className ="accomodation__box_user">
+            <div className="accomodation__name_user">{accomodation.host.name}</div>
+            <img className="accomodation__img_user" src = {accomodation.host.picture} alt ="User picture" />
+            <div className="accomodation__ratings">
                 <img src={redStar} alt ="red_star" className="star" ></img>
                 <img src={redStar} alt ="red_star" className="star" ></img>
                 <img src={redStar} alt ="red_star" className="star" ></img>
@@ -35,9 +42,9 @@ const Accomodation = () => {
             </div>
         </div>
       </div>
-      <div className = "accomodation_collapse">
-        <Collapse title= "De" description= "Bla frslgf rdgrdgd gdltdgtdgbdg fdlgtd gtldg bdl" page="accomodation" />
-        <Collapse title= "De" description= "Bla frslgf rdgrdgd gdltdgtdgbdg fdlgtd gtldg bdl" page="accomodation" />
+      <div className = "accomodation__collapse">
+        <Collapse title= "Description" description= {accomodation.description} page="accomodation" />
+        <Collapse title= "Équipements" description= {accomodation.equipments} page="equipments" />
       </div>
     </div>
   );
