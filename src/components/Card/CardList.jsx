@@ -5,7 +5,6 @@ import Card from "./Card"
 
 const CardList = ({datas}) => { //jai du mettre {} sinon data etait un objet dans un tableau et mon .map pop une erreur
 
-  console.log("3", datas)
   return (
     <main className= "card_container">
         {datas.map(({id, title, cover}) => 

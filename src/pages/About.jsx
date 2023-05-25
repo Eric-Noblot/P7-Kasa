@@ -5,11 +5,12 @@ import Collapse from "../components/Collapse/Collapse";
 import aboutCollapseDatas from "../assets/data/aboutCollapse.json";
 
 const About = () => {
+
   return (
     <div>
       <Header />
       {aboutCollapseDatas.map((data, index ) => (
-        <Collapse key={index} title={data.title} description={data.description} />
+        <Collapse key={index} title={data.title} description={data.description} page={"about"} />
       ))}
       <Footer />
     </div>

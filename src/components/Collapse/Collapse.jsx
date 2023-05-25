@@ -3,14 +3,14 @@ import "../../styles/components/Collapse/collapse.scss";
 import bottomArrow from "../../assets/img/fleche_bas.png";
 import topArrow from "../../assets/img/fleche_haut.png";
 
-const Collapse = ({title, description}) => {
+const Collapse = ({page, title, description}) => {
 
   const [isOpen, setIsOpen] = useState(false)
   
   return (
 
-    <div className="collapse_container">
-      <div className="collapse_box" onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}>
+    <div className={page + "_collapse_container"}>
+      <div className={page + "_collapse_box"} onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}>
         <h2 className="collapse_text">{title}</h2>
         { isOpen ? 
         <img className="collapse_img"  src= {topArrow} alt="flèche du haut" /> :
@@ -18,7 +18,7 @@ const Collapse = ({title, description}) => {
         }
       </div>
       { isOpen ? 
-      <div className="collapse_description">
+      <div className={page + "_collapse_description"}>
         <p>{description}</p>
       </div>
         : null}
