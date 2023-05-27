@@ -3,6 +3,8 @@ import "../styles/pages/accomodation.scss";
 import redStar from "../assets/img/red_star.png"
 import greyStar from "../assets/img/grey_star.png"
 import Collapse from "../components/Collapse/Collapse"
+import Carousel from "../components/Carousel/Carousel"
+
 // import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -12,22 +14,19 @@ const Accomodation = ({datas}) => {
   const idAccomodation  = useParams().id;
   const accomodation = datas.find(element => element.id === idAccomodation)
 
+ 
 
   return (
     <div className="accomodation">
-      <div className="accomodation__box_img">
-        <div className="accomodation__img">
-          <div className="fleche_gauche"></div>
-          <div className="fleche_droite"></div>
-          <div className="accomodation__numbers">1/5</div>
-        </div>
-      </div>
+
+      <Carousel accomodation={accomodation}/>
+
       <div className = "accomodation__box_text">
         <div className="accomodation__text">
             <h2>{accomodation.title}</h2>
             <h3>{accomodation.location}</h3>
-            {accomodation.tags.map((tag)  => (
-              <button type = "button" className="accomodation__button">{tag}</button>
+            {accomodation.tags.map((tag, index)  => (
+              <button type = "button" className="accomodation__button"  key={"button" + index}>{tag}</button>
             ))}
         </div>
         <div className ="accomodation__box_user">

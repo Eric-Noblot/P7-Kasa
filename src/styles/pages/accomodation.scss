@@ -1,3 +1,15 @@
+@keyframes menu__translate{
+    from {
+        transform: translateY(5%);
+        opacity: 0.1;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
 .accomodation {
     margin: 50px 0;
     &__box_img{
@@ -5,38 +17,16 @@
         width: 100%;
         position: relative;
         border-radius: 25px;
-    }
-    &__img{
-        background-image: url("../../assets/img/background_about.jpg");
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        border-radius: 25px;
-    }
-    .fleche_gauche{
-        background-image: url("../../assets/img/fleche_gauche.png");
-        height: 80px;
-        width: 46px;
-        position: absolute;
-        top: 170px;
-        left: 50px;
-    }
-    .fleche_droite{
-        background-image: url("../../assets/img/fleche_droite.png");
-        height: 80px;
-        width: 46px;
-        position: absolute;
-        top: 170px;
-        right: 50px;
+        animation: menu__translate;
+        animation-duration: 1.5s;
     }
     &__numbers{
         color: white;
         text-align: center;
         margin-top: 350px;
-        font-size: 18px;
-        font-weight: 500;    
+        font-size: 20px;
+        font-weight: 500;
+        text-shadow: 1px 1px 5px black;    
     }
     &__box_text{
         display: flex;
@@ -64,6 +54,7 @@
             height: 25px;
             width: 125px;
             margin-right: 20px;
+            margin-bottom: 15px;
             color: white;
         }
     }
@@ -102,13 +93,30 @@
         // width: 100%;
         gap: 20px;
     }
+    .fleche_gauche{
+        background-image: url("../../assets/img/fleche_gauche.png");
+        height: 80px;
+        width: 46px;
+        position: absolute;
+        top: 170px;
+        left: 50px;
+        cursor: pointer;
+    }
+    .fleche_droite{
+        background-image: url("../../assets/img/fleche_droite.png");
+        height: 80px;
+        width: 46px;
+        position: absolute;
+        top: 170px;
+        right: 50px;
+        cursor: pointer;
+    }
 }
 
 .star{
     height: 25px;
     width: 25px;
 }
-
 
 
 

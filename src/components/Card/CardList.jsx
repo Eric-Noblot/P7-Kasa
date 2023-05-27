@@ -5,7 +5,7 @@ import Card from "./Card"
 import { Link } from "react-router-dom"
 import Accomodation from "../../pages/Accomodation"
 
-const CardList = ({datas}) => { //jai du mettre {} sinon data etait un objet dans un tableau et mon .map pop une erreur
+const CardList = ({datas}) => { 
 
   return (
     <main className= "card_container">
