@@ -4,8 +4,7 @@ import redStar from "../assets/img/red_star.png"
 import greyStar from "../assets/img/grey_star.png"
 import Collapse from "../components/Collapse/Collapse"
 import Carousel from "../components/Carousel/Carousel"
-
-// import { useEffect, useState } from "react";
+import Error from "./Error"
 import { useParams } from "react-router-dom";
 
 
@@ -13,8 +12,10 @@ const Accomodation = ({datas}) => {
 
   const idAccomodation  = useParams().id;
   const accomodation = datas.find(element => element.id === idAccomodation)
+  if (!accomodation) return(<Error />)
 
- 
+  const arrayRating = [1, 2, 3, 4, 5]
+  const ratingAccomodation = parseInt(accomodation.rating)
 
   return (
     <div className="accomodation">
@@ -33,14 +34,15 @@ const Accomodation = ({datas}) => {
             <div className="accomodation__name_user">{accomodation.host.name}</div>
             <img className="accomodation__img_user" src = {accomodation.host.picture} alt ="User picture" />
             <div className="accomodation__ratings">
-                <img src={redStar} alt ="red_star" className="star" ></img>
-                <img src={redStar} alt ="red_star" className="star" ></img>
-                <img src={redStar} alt ="red_star" className="star" ></img>
-                <img src={greyStar} alt ="grey_star" className="star" ></img>
-                <img src={greyStar} alt ="grey_star" className="star" ></img>
+
+            {arrayRating.map( (number)=> 
+            number <= ratingAccomodation ? 
+            <img key ={number} src={redStar} alt ="red_star" className="star" ></img>   
+            : <img key ={number} src={greyStar} alt ="grey_star" className="star" ></img>)}
             </div>
         </div>
       </div>
+
       <div className = "accomodation__collapse">
         <Collapse title= "Description" description= {accomodation.description} page="accomodation" />
         <Collapse title= "Équipements" description= {accomodation.equipments} page="equipments" />
