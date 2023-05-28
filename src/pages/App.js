@@ -6,6 +6,7 @@ import "../styles/pages/app.scss"
 import Accomodation from "./Accomodation"
 import NavBar from "../components/Header/NavBar"
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer/Footer"
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path = "/accomodation/:id" element ={<Accomodation datas={accomodations} />} />
         <Route path = "*" element ={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

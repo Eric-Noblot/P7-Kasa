@@ -12,7 +12,7 @@ const Accomodation = ({datas}) => {
 
   const idAccomodation  = useParams().id;
   const accomodation = datas.find(element => element.id === idAccomodation)
-  if (!accomodation) return(<Error />)
+   if (!accomodation) return(<Error />)
 
   const arrayRating = [1, 2, 3, 4, 5]
   const ratingAccomodation = parseInt(accomodation.rating)
@@ -21,7 +21,7 @@ const Accomodation = ({datas}) => {
     <div className="accomodation">
 
       <Carousel accomodation={accomodation}/>
-
+      
       <div className = "accomodation__box_text">
         <div className="accomodation__text">
             <h2>{accomodation.title}</h2>
@@ -44,8 +44,8 @@ const Accomodation = ({datas}) => {
       </div>
 
       <div className = "accomodation__collapse">
-        <Collapse title= "Description" description= {accomodation.description} page="accomodation" />
-        <Collapse title= "Équipements" description= {accomodation.equipments} page="equipments" />
+        <Collapse title= "Description" datas= {accomodation.description} page="description" />
+        <Collapse title= "Équipements" datas= {accomodation.equipments} page="equipments" />
       </div>
     </div>
   );

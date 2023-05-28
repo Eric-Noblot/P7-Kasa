@@ -32,13 +32,16 @@ const Carousel = ({accomodation}) => {
         setIndexActualPicture(newIndexPicture)
         setActualPicture(accomodationPictures[newIndexPicture])
     }
-
     return (
 
             <div className="accomodation__box_img">
                 <div style={accomodation_img}>
-                    <div className="fleche_gauche" onClick={previousPicture}></div>
-                    <div className="fleche_droite" onClick={nextPicture}></div>
+                    {accomodationPictures.length <= 1 ? null
+                    : <>
+                        <div className="fleche_droite" onClick={nextPicture}></div>
+                        <div className="fleche_gauche" onClick={previousPicture}></div>
+                    </>
+                    }
                     <div className="accomodation__numbers">{`${indexActualPicture +1} / ${accomodationPictures.length}`}</div>
                 </div>
             </div>

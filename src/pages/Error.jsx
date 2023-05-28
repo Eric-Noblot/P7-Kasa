@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from "../components/Header/NavBar"
 import "../styles/pages/error.scss"
 import { NavLink } from "react-router-dom"
 

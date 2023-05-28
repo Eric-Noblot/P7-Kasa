@@ -1,4 +1,4 @@
-.footer_container {
+.footer {
     width: 100%;
     max-width: 1240px;
     margin-left: auto;
@@ -10,16 +10,15 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    &__img{
+        // background-image: url("../../../assets/img/logo_noir.webp");
+        height: 45px;
+        width: 130px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__text{
+        color: white;
+    }
 }
 
-.footer_img{
-    // background-image: url("../../../assets/img/logo_noir.webp");
-    height: 45px;
-    width: 130px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer_text{
-    color: white;
-}

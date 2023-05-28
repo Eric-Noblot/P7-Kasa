@@ -11,7 +11,8 @@
 
 
 .accomodation {
-    margin: 50px 0;
+    margin: 50px auto;
+    max-width: 1240px;
     &__box_img{
         height: 415px;
         width: 100%;
@@ -92,6 +93,7 @@
         justify-content: space-between;
         // width: 100%;
         gap: 20px;
+        margin-bottom: 200px;
     }
     .fleche_gauche{
         background-image: url("../../assets/img/fleche_gauche.png");

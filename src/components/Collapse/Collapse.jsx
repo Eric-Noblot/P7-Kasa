@@ -1,37 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/components/Collapse/collapse.scss";
 import bottomArrow from "../../assets/img/fleche_bas.png";
 import topArrow from "../../assets/img/fleche_haut.png";
 
-const Collapse = ({page, title, description}) => {
+const Collapse = ({ page, title, datas }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  // let resultat = description.map((el) => {
-  //   console.log(el)
-  // })
-
-
-  // const equipmentsArray = []
-  // equipmentsArray = description.map(() =>{
-  //   console.log(equipmentsArray)
-  // })
-
-  const [isOpen, setIsOpen] = useState(false)
-  
   return (
-
-    <div className={page + "_collapse_container"}>
-      <div className={page + "_collapse_box"} onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}>
-        <h2 className="collapse_text">{title}</h2>
-        { isOpen ? 
-        <img className="collapse_img"  src= {topArrow} alt="flèche du haut" /> :
-        <img className="collapse_img"  src= {bottomArrow} alt="flèche du bas" />
-        }
+    <div className={page}>
+      <div
+        className={page + "__collapse_box"}
+        onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+      >
+        <h2>{title}</h2>
+        {isOpen ? (
+          <img className="collapse_img" src={topArrow} alt="flèche du haut" />
+        ) : (
+          <img className="collapse_img" src={bottomArrow} alt="flèche du bas" />
+        )}
       </div>
-      { isOpen ? 
-      <div className={page + "_collapse_description"}>
-        <p>{description}</p>
-      </div>
-        : null}
+      {isOpen ? (
+        <div className={page + "__collapse_data"}>
+          {Array.isArray(datas) ? (
+            datas.map((data, index) => {
+              return (
+                <p key={index} style={{ marginTop: "10px", marginBottom :0 }}>
+                  {data}
+                </p>
+              );
+            })
+          ) : (
+            <p>{datas}</p>
+          )}
+        </div>
+      ) : null}
     </div>
   );
 };
