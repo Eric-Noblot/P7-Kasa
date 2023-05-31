@@ -4,15 +4,37 @@ import redStar from "../assets/img/red_star.png"
 import greyStar from "../assets/img/grey_star.png"
 import Collapse from "../components/Collapse/Collapse"
 import Carousel from "../components/Carousel/Carousel"
+import Loader from "../components/Loader/Loader"
 import Error from "./Error"
+
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 const Accomodation = ({datas}) => {
 
+  console.log("1",datas)
+//   const [accomodations, setAccomodations] = useState([])
+
+//   useEffect(() => {
+
+//         fetch("http://localhost:3000/data/data.json")
+//         .then(res => res.json())
+//         .then(data => setAccomodations(data))
+//         .catch(error => "Erreur de connexion avec l'API:" + error)    
+
+// },[])
+
+//rendu initial
   const idAccomodation  = useParams().id;
+  if (datas.length === 0 ) {
+    return (<Loader />)
+    // loader
+  }
+
   const accomodation = datas.find(element => element.id === idAccomodation)
-   if (!accomodation) return(<Error />)
+  console.log("2", accomodation)
+ if (!accomodation) return(<Error />)
 
   const arrayRating = [1, 2, 3, 4, 5]
   const ratingAccomodation = parseInt(accomodation.rating)

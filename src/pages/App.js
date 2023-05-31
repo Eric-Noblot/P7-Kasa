@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "../pages/Home"
 import About from "../pages/About"
+import Loader from "../components/Loader/Loader"
 import Error from "../pages/Error"
 import "../styles/pages/app.scss"
 import Accomodation from "./Accomodation"
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path = "/" element ={<Home datas={accomodations} />} />
         <Route path = "/about" element={<About />} />
+        <Route path = "/loader" element={<Loader />} />
         <Route path = "/accomodation/:id" element ={<Accomodation datas={accomodations} />} />
         <Route path = "*" element ={<Error />} />
       </Routes>

@@ -1,0 +1,56 @@
+.loader__container{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    width: 100%;
+    height: 800px;
+    opacity: 1;
+    animation: loading infinite;
+    margin-top: -100px;
+}
+.loader {
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &__bar:nth-child(odd) {
+        width: 15px;
+        height: 15px;
+        animation: bars 500ms infinite;
+        animation-direction: alternate;
+        background-color: red;
+        animation-delay: 300ms;
+        border-radius: 50%;
+    }
+    &__bar:nth-child(even) {
+        width: 15px;
+        height: 15px;
+        animation: bars 500ms infinite;
+        animation-direction: alternate-reverse;
+        background-color: black;
+        animation-delay: 300ms;
+        border-radius: 50%;
+    }
+}
+
+@keyframes bars {
+    from{
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes loading {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0;
+    }
+}

@@ -1,17 +1,10 @@
-.card_container {
-    max-width: 1240px;
-    width: 100%;
-    background-color: #F6F6F6;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 340px);
-    grid-gap:50px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    
+@keyframes menu__translate{
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .card{
@@ -19,31 +12,26 @@
     display: flex;
     flex-direction: column;
     width: 340px;
-     background-image: linear-gradient(rgba(255, 96, 96, 1), rgba(175, 57, 57, 0.9));
-    //, url("../../../assets/img/background_header.jpg");
+    background-image: linear-gradient(rgba(255, 96, 96, 1), rgba(175, 57, 57, 0.9));
     border-radius: 10px;
     position: relative;
-    // margin-bottom: 50px;
+    animation: menu__translate;
+    animation-duration: 1.5s;
+    &__img{
+        // position: absolute;
+        box-sizing: border-box;
+        background-size: cover;
+        height: 80%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+    }
+    &__title{
+        color: white;
+        margin: 10px 15px;
+        line-height: 25px;
+    }
 }
 
-.card_img{
-    // position: absolute;
-    box-sizing: border-box;
-    background-size: cover;
-    height: 80%;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    object-fit: cover;
-}
 
-.title_card{
-    color: white;
-    margin: 10px 15px;
-    line-height: 25px;
 
-}
-
-.link_accomodation {
-    text-decoration: none;
-    cursor: pointer;
-}

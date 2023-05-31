@@ -6,7 +6,7 @@ const Carousel = ({accomodation}) => {
     const [indexActualPicture, setIndexActualPicture] = useState(0)
     const accomodationPictures = accomodation.pictures
 
-    const accomodation_img = {
+    const accomodation__img = {
         height: "100%",
         width: "100%",
         backgroundSize: "cover",
@@ -35,7 +35,7 @@ const Carousel = ({accomodation}) => {
     return (
 
             <div className="accomodation__box_img">
-                <div style={accomodation_img}>
+                <div style={accomodation__img}>
                     {accomodationPictures.length <= 1 ? null
                     : <>
                         <div className="fleche_droite" onClick={nextPicture}></div>

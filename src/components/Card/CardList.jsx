@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/components/Card/card.scss"
+import "../../styles/components/Card/cardList.scss"
 //import datas from "../../assets/data/data.json"
 import Card from "./Card"
 import { Link } from "react-router-dom"
@@ -8,9 +8,9 @@ import Accomodation from "../../pages/Accomodation"
 const CardList = ({datas}) => { 
 
   return (
-    <main className= "card_container">
+    <main className= "cardList">
         {datas.map(({id, title, cover}) => 
-        <Link to={`/accomodation/${id}`} element={<Accomodation />} className="link_accomodation" key={id}> 
+        <Link to={`/accomodation/${id}`} element={<Accomodation />} className="cardList__link" key={id}> 
          <Card id={id} title={title} cover={cover}/>
          </Link>
             )}
@@ -19,9 +19,3 @@ const CardList = ({datas}) => {
 }
 
 export default CardList
-
-
-// {datas.map((data) => (
-//     const { id, cover, title } = data
-// ))}
-// <Card id={id} cover={cover} title={title}/>
