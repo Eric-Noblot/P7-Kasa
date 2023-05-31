@@ -1,25 +1,24 @@
+@import "../../utils/utils.scss";
+
 .loader__container{
-    display: flex;
-    justify-content: center;
-    align-items:  center;
+    @include flex_center;
     width: 100%;
     height: 800px;
     opacity: 1;
     animation: loading infinite;
-    margin-top: -100px;
+    margin-top: -150px;
 }
 .loader {
+    @include flex_column;
     width: 100px;
     height: 120px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     &__bar:nth-child(odd) {
         width: 15px;
         height: 15px;
         animation: bars 500ms infinite;
         animation-direction: alternate;
-        background-color: red;
+        background-color: $primary_color;
         animation-delay: 300ms;
         border-radius: 50%;
     }
@@ -28,29 +27,9 @@
         height: 15px;
         animation: bars 500ms infinite;
         animation-direction: alternate-reverse;
-        background-color: black;
+        background-color: $footer_color;
         animation-delay: 300ms;
         border-radius: 50%;
     }
 }
 
-@keyframes bars {
-    from{
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes loading {
-    0%{
-        opacity: 1;
-    }
-    75%{
-        opacity: 0.8;
-    }
-    100%{
-        opacity: 0;
-    }
-}

@@ -1,19 +1,19 @@
+@import "../../utils/utils.scss";
+
 .banner{
+    @include flex_center;
     margin: 50px 0;
     max-width: 1240px;
     background-position: center;
     background-size: cover;
     height: 223px;
     border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .banner_home{
     background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_header.jpg");
     .banner_text {
-        color: white;
+        color: $secondary_color;
         font-size: 48px;
         font-weight: 500;   
     }

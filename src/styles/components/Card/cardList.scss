@@ -1,7 +1,9 @@
+@import "../../utils/utils.scss";
+
 .cardList {
     max-width: 1240px;
     width: 100%;
-    background-color: #F6F6F6;
+    background-color: $tertiary_color;
     display: grid;
     grid-template-columns: repeat(auto-fill, 340px);
     grid-gap:50px;

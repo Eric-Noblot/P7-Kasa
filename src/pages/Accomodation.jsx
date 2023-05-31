@@ -13,29 +13,19 @@ import { useEffect, useState } from "react";
 
 const Accomodation = ({datas}) => {
 
-  console.log("1",datas)
-//   const [accomodations, setAccomodations] = useState([])
-
-//   useEffect(() => {
-
-//         fetch("http://localhost:3000/data/data.json")
-//         .then(res => res.json())
-//         .then(data => setAccomodations(data))
-//         .catch(error => "Erreur de connexion avec l'API:" + error)    
-
-// },[])
-
-//rendu initial
   const idAccomodation  = useParams().id;
+
+  //gestion du rendu initial avec fecth et useEffect
   if (datas.length === 0 ) {
     return (<Loader />)
-    // loader
   }
 
   const accomodation = datas.find(element => element.id === idAccomodation)
-  console.log("2", accomodation)
- if (!accomodation) return(<Error />)
 
+  //si l'utilisateur change manuellement l'id de l'URL
+  if (!accomodation) return(<Error />)
+
+  //gestion des étoiles 
   const arrayRating = [1, 2, 3, 4, 5]
   const ratingAccomodation = parseInt(accomodation.rating)
 

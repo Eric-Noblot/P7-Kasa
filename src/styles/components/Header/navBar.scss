@@ -1,3 +1,6 @@
+@import "../../utils/utils.scss";
+
+
 .nav {
     display: flex;
     align-items: center;
@@ -5,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     &__link {
-        color: #FF6060;
+        color: $primary_color;
         text-decoration: none;
         margin-right: 20px;
     }
@@ -16,8 +19,8 @@
     &__active{
         text-decoration: none;
         margin-right: 15px;
-        border-bottom: 2px solid #FF6060;
-        color: #FF6060;
+        border-bottom: 2px solid $primary_color;
+        color: $primary_color;
     }
 }
 

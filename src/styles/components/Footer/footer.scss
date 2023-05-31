@@ -1,24 +1,24 @@
+@import "../../utils/utils.scss";
+
 .footer {
+    @include flex_center;
     width: 100%;
     max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
     height: 150px;
-    background-color: black;
-    display: flex;
+    background-color: $footer_color;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+
     &__img{
-        // background-image: url("../../../assets/img/logo_noir.webp");
         height: 45px;
         width: 130px;
         margin-left: auto;
         margin-right: auto;
     }
     &__text{
-        color: white;
+        color: $secondary_color;
     }
 }
 

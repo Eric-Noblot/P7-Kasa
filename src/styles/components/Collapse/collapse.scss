@@ -1,33 +1,28 @@
+@import "../../utils/utils.scss";
 
 h2 {
-    color: white;
+    color: $secondary_color;
     font-weight: 500;
-    margin-top: 11px;
-
 }
 .collapse_img {
     height: 20px;
     width: 28px;
-    margin-top: 16px;
+    margin-top: 3px;
 }
 
 .about  {
+    @include flex_center;
     max-width: 70%;
-    display: flex;
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 40px;
     &__collapse_box{
+        @include flex_between;
         height: 47px;
         width: 100%;
-        background-color: #FF6060;
+        background-color: $primary_color;
         border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
         padding: 5px 30px;
         cursor: pointer;
         }
@@ -35,58 +30,52 @@ h2 {
         width: 100%;
         padding: 20px 30px;
         border-radius: 5px;
-        background-color: #F6F6F6;
-        color: #FF6060;
+        background-color: $tertiary_color;
+        color: $primary_color;
         line-height: 22px;
     }
 }
 
 .description{
-    display: flex;
-    flex-direction: column;
+    @include flex_column;
     width: 582px;
     &__collapse_box{
+        @include flex_between;
         height: 52px;
         width: 100%;
-        background-color: #FF6060;
+        background-color: $primary_color;
         border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
         padding: 0 30px;
         cursor: pointer;
         }
     &__collapse_data {
         width: 100%;
         border-radius: 5px;
-        background-color: #F6F6F6;
-        color: #FF6060;
+        background-color: $tertiary_color;
+        color: $primary_color;
         padding: 20px 30px;
         line-height: 22px;
     }
 }
 
 .equipments{
-    display: flex;
-    flex-direction: column;
+    @include flex_column;
     width: 582px;
     padding: 0 60px; 
     &__collapse_box{
+        @include flex_between;
         height: 52px;
         width: 100%;
-        background-color: #FF6060;
+        background-color: $primary_color;
         border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
         padding: 0 30px; 
         cursor: pointer;
         }
     &__collapse_data {
         width: 100%;
         border-radius: 5px;
-        background-color: #F6F6F6;
-        color: #FF6060;
+        background-color: $tertiary_color;
+        color: $primary_color;
         padding: 28px 30px;
         display: flex;
         flex-direction: column;

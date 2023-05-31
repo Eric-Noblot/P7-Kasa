@@ -1,11 +1,15 @@
 import React from "react";
 import "../../styles/components/Card/cardList.scss"
-//import datas from "../../assets/data/data.json"
+import Loader from "../Loader/Loader"
 import Card from "./Card"
 import { Link } from "react-router-dom"
 import Accomodation from "../../pages/Accomodation"
 
 const CardList = ({datas}) => { 
+  //gestion du rendu initial davec fecth et useEffect
+  if (datas.length === 0 ) {
+    return (<Loader />)
+  }
 
   return (
     <main className= "cardList">
