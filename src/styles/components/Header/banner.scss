@@ -15,7 +15,15 @@
     .banner_text {
         color: $secondary_color;
         font-size: 48px;
-        font-weight: 500;   
+        font-weight: 500; 
+        @media screen and (max-width: 790px) {
+            width: 370px;
+            font-size: 40px;
+        }
+        @media screen and (max-width: 500px) {
+            width: 275px;
+            font-size: 30px;
+        }
     }
 }
 

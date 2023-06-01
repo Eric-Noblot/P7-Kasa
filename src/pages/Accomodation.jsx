@@ -7,9 +7,7 @@ import Carousel from "../components/Carousel/Carousel"
 import Loader from "../components/Loader/Loader"
 import Error from "./Error"
 
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-
+import { useParams } from "react-router-dom"; 
 
 const Accomodation = ({datas}) => {
 
@@ -43,14 +41,16 @@ const Accomodation = ({datas}) => {
             ))}
         </div>
         <div className ="accomodation__box_user">
-            <div className="accomodation__name_user">{accomodation.host.name}</div>
-            <img className="accomodation__img_user" src = {accomodation.host.picture} alt ="User picture" />
+            <div className = "accomodation__flex_user">
+              <div className="accomodation__name_user">{accomodation.host.name}</div>
+              <img className="accomodation__img_user" src = {accomodation.host.picture} alt ="User picture" />
+            </div>
             <div className="accomodation__ratings">
 
             {arrayRating.map( (number)=> 
             number <= ratingAccomodation ? 
-            <img key ={number} src={redStar} alt ="red_star" className="star" ></img>   
-            : <img key ={number} src={greyStar} alt ="grey_star" className="star" ></img>)}
+            <img key ={number} src={redStar} alt ="red_star" className="accomodation__star" ></img>   
+            : <img key ={number} src={greyStar} alt ="grey_star" className="accomodation__star" ></img>)}
             </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ const Accomodation = ({datas}) => {
         <Collapse title= "Description" datas= {accomodation.description} page="description" />
         <Collapse title= "Équipements" datas= {accomodation.equipments} page="equipments" />
       </div>
-    </div>
+      </div>
   );
 };
 

@@ -6,6 +6,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
     &__number {
         font-size: 288px;
         font-weight: bold;
@@ -16,7 +17,7 @@
         font-size: 26px;
         color: $primary_color;
         font-weight: 500;
-    
+        text-align: center;
     }
     &__link {
         font-size: 18px;
@@ -28,5 +29,30 @@
 }
 
 
+@media screen and (max-width: 790px) {
+    .error{
+        &__number {
+            font-size: 200px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+    }
+}
 
-
+@media screen and (max-width: 500px) {
+    .error{
+        &__number {
+            font-size: 96px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+    }
+}

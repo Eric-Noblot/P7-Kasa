@@ -49,10 +49,18 @@
             color: $secondary_color;
         }
     }
+    &__flex_user {
+        width: 100%;
+        display: flex;
+        margin-bottom : 10px;
+        justify-content: flex-end;
+        align-items: center;
+    }
     &__box_user{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 70px;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin-top: 15px;
     }
     &__name_user {
         color: $primary_color;
@@ -60,8 +68,6 @@
         font-size: 18px;
         width: 80px;
         text-align: end;
-        margin-right: 15px;
-        margin-top: 10px;
     }
     &__img_user {
         height: 64px;
@@ -71,7 +77,6 @@
     }
     &__ratings {
         font-size: 2rem;
-        grid-column: 1/3;
         width: 100%;
         margin-top: 10px;
         display: flex;
@@ -83,40 +88,97 @@
         gap: 20px;
         margin-bottom: 200px;
     }
-    .fleche_gauche{
+    &__star{
+        height: 25px;
+        width: 25px;
+        margin-right: 15px;
+    }
+    .arrow {
+        height: 80px;
+        width: 46px;
+        position: absolute;
+        top: 170px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+     .left_arrow{
         background-image: url("../../assets/img/fleche_gauche.png");
-        height: 80px;
-        width: 46px;
-        position: absolute;
-        top: 170px;
-        left: 50px;
-        cursor: pointer;
-        &:hover{
-            transform: scale(1.2);
-        }
-    }
-    .fleche_droite{
+        left: 45px;
+     }
+    .right_arrow{
         background-image: url("../../assets/img/fleche_droite.png");
-        height: 80px;
-        width: 46px;
-        position: absolute;
-        top: 170px;
-        right: 50px;
-        cursor: pointer;
-        &:hover{
-            transform: scale(1.2);
-        }
+        right: 45px;
     }
 }
 
-.star{
-    height: 25px;
-    width: 25px;
+
+
+@media screen and (max-width: 790px){
+    .left_arrow {
+        transform: scale(0.8);
+        margin-left: -30px;
+    }
+    .right_arrow {
+        transform: scale(0.8);
+        margin-right: -30px;
+    }
+
+    .accomodation {
+        &__numbers {
+            display: none;
+        }
+        &__box_text{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+            margin-top: 40px;
+        }
+        &__flex_user {
+            width: 80%;
+            display: flex;
+            margin-bottom : 10px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &__box_user{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+        }
+        &__name_user {
+            margin-left: 10px;
+        }
+        &__ratings {
+            width: 260px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        &__collapse{
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+        }
+        &__star{
+            margin-right: 10px;
+        }
+    }
+}   
+
+@media screen and (max-width: 415px) {
+    .accomodation{
+        &__star{
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+
+        }
+    }
 }
-
-
-
-
 
 
 

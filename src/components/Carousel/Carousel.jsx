@@ -34,17 +34,17 @@ const Carousel = ({accomodation}) => {
     }
     return (
 
-            <div className="accomodation__box_img">
-                <div style={accomodation__img}>
-                    {accomodationPictures.length <= 1 ? null
-                    : <>
-                        <div className="fleche_droite" onClick={nextPicture}></div>
-                        <div className="fleche_gauche" onClick={previousPicture}></div>
-                    </>
-                    }
-                    <div className="accomodation__numbers">{`${indexActualPicture +1} / ${accomodationPictures.length}`}</div>
-                </div>
-            </div>
+    <div className="accomodation__box_img">
+        <div style={accomodation__img}>
+            {accomodationPictures.length <= 1 ? null
+            : <>
+                <div className="right_arrow arrow" onClick={nextPicture}></div>
+                <div className="left_arrow arrow" onClick={previousPicture}></div>
+            </>
+            }
+            <div className="accomodation__numbers">{`${indexActualPicture +1} / ${accomodationPictures.length}`}</div>
+        </div>
+    </div>
 
     );
 };

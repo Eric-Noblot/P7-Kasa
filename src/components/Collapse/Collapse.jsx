@@ -24,13 +24,13 @@ const Collapse = ({ page, title, datas }) => {
           {Array.isArray(datas) ? (
             datas.map((data, index) => {
               return (
-                <p key={index} style={{ marginTop: "10px", marginBottom :0 }}>
+                <p key={index} className = {page + "__collapse_text"} style={{ marginTop: "10px", marginBottom :0 }}>
                   {data}
                 </p>
               );
             })
           ) : (
-            <p>{datas}</p>
+            <p className = {page + "__collapse_text"}>{datas}</p>
           )}
         </div>
       ) : null}
