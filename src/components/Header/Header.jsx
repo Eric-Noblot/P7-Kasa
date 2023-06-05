@@ -4,9 +4,9 @@ import Banner from "./Banner"
 
 const Header = () => {
     return (    
-        <div className = "header">
+        <header className = "header">
             <Banner />
-        </div>
+        </header>
     );
 };
 

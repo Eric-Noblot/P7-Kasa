@@ -32,15 +32,15 @@ const Accomodation = ({datas}) => {
 
       <Carousel accomodation={accomodation}/>
       
-      <div className = "accomodation__box_text">
-        <div className="accomodation__text">
-            <h2>{accomodation.title}</h2>
-            <h3>{accomodation.location}</h3>
+      <main className = "accomodation__box_text">
+        <article className="accomodation__text">
+            <h3>{accomodation.title}</h3>
+            <h4>{accomodation.location}</h4>
             {accomodation.tags.map((tag, index)  => (
               <button type = "button" className="accomodation__button"  key={"button" + index}>{tag}</button>
             ))}
-        </div>
-        <div className ="accomodation__box_user">
+        </article>
+        <article className ="accomodation__box_user">
             <div className = "accomodation__flex_user">
               <div className="accomodation__name_user">{accomodation.host.name}</div>
               <img className="accomodation__img_user" src = {accomodation.host.picture} alt ="User picture" />
@@ -52,14 +52,14 @@ const Accomodation = ({datas}) => {
             <img key ={number} src={redStar} alt ="red_star" className="accomodation__star" ></img>   
             : <img key ={number} src={greyStar} alt ="grey_star" className="accomodation__star" ></img>)}
             </div>
-        </div>
-      </div>
+        </article>
+      </main>
 
       <div className = "accomodation__collapse">
         <Collapse title= "Description" datas= {accomodation.description} page="description" />
         <Collapse title= "Équipements" datas= {accomodation.equipments} page="equipments" />
       </div>
-      </div>
+    </div>
   );
 };
 

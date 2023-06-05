@@ -9,11 +9,11 @@ const About = () => {
   return (
     <>
       <Header />
-      <div className="collapse_container">
+      <main className="collapse_container">
         {aboutCollapseDatas.map((data, index ) => (
           <Collapse key={index} title={data.title} datas={data.description} page={"about"} />
         ))}
-      </div>
+      </main>
     </>
   );
 };

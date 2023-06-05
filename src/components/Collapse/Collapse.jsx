@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles/components/Collapse/collapse.scss";
 import bottomArrow from "../../assets/img/fleche_bas.png";
 import topArrow from "../../assets/img/fleche_haut.png";
