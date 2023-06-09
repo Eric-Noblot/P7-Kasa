@@ -40,9 +40,10 @@ const Carousel = ({accomodation}) => {
             : <>
                 <div className="right_arrow arrow" onClick={nextPicture}></div>
                 <div className="left_arrow arrow" onClick={previousPicture}></div>
+                <div className="accomodation__numbers">{`${indexActualPicture +1} / ${accomodationPictures.length}`}</div>
             </>
             }
-            <div className="accomodation__numbers">{`${indexActualPicture +1} / ${accomodationPictures.length}`}</div>
+            
         </div>
     </div>
 

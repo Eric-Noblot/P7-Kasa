@@ -1,12 +1,18 @@
 import React from 'react';
-import Header from "../components/Header/Header"
+import "../components/Header/Banner"
 import CardList from "../components/Card/CardList"
- 
+import Banner from "../components/Header/Banner"
+
 const Home = ({datas}) => {
 
     return (
         <>
-            <Header />
+            <div class = "baner_container">
+                <Banner>
+                    <div className = "banner_home banner">
+                    <h1 className = "banner_text">Chez vous, partout ou ailleurs</h1></div>
+                </Banner>
+            </div>
             <CardList datas={datas} />
         </>
     );

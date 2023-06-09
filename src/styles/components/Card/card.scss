@@ -5,7 +5,6 @@
     @include flex_column;
     height: 340px;
     width: 340px;
-    background-image: linear-gradient(rgba(255, 96, 96, 1), rgba(175, 57, 57, 0.9));
     border-radius: 10px;
     position: relative;
     animation: menu__translate;
@@ -14,16 +13,22 @@
         box-sizing: border-box;
         background-size: cover;
         object-fit: cover;
-        height: 80%;
+        height: 100%;
         width: 100%;
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px;
     }
     &__title{
         color: $secondary_color;
         margin: 10px 15px;
         line-height: 25px;
+        position: absolute;
+        bottom: 10px;
+    }
+    &__filter {
+        position: absolute;
+        height: 340px;
+        width: 340px;
+        background: linear-gradient(rgba(255, 255, 255, 0.188), rgba(0, 0, 0, 0.3));
+        border-radius: 10px;
     }
 }
-
-
-
