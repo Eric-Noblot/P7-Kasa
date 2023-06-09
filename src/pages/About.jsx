@@ -9,11 +9,7 @@ const About = () => {
 
   return (
     <>
-      <div class = "baner_container">
-        <Banner>
-          <div className = "banner_about banner"></div>
-        </Banner>
-      </div>
+      <Banner bannerClassName={"about"} />
 
       <main className="collapse_container">
         {aboutCollapseDatas.map((data, index ) => (

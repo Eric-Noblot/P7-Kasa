@@ -7,12 +7,8 @@ const Home = ({datas}) => {
 
     return (
         <>
-            <div class = "baner_container">
-                <Banner>
-                    <div className = "banner_home banner">
-                    <h1 className = "banner_text">Chez vous, partout ou ailleurs</h1></div>
-                </Banner>
-            </div>
+            <Banner bannerClassName={"home"} bannerText={"Chez vous, partout ou ailleurs"} />
+            
             <CardList datas={datas} />
         </>
     );
