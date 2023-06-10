@@ -1,5 +1,12 @@
 @import "../../utils/utils.scss";
 
+.banner_home{
+    background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_header.jpg");
+}
+.banner_about{
+    background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_about.jpg");
+}
+
 .banner{
     @include flex_center;
     margin: 50px 0;
@@ -10,27 +17,17 @@
     border-radius: 25px;
 }
 
-.banner_home{
-    background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_header.jpg");
-    .banner_text {
-        color: $secondary_color;
-        font-size: 48px;
-        font-weight: 500; 
-        @media screen and (max-width: 790px) {
-            width: 370px;
-            font-size: 40px;
-        }
-        @media screen and (max-width: 500px) {
-            width: 275px;
-            font-size: 30px;
-        }
+.banner_text {
+    color: $secondary_color;
+    font-size: 48px;
+    font-weight: 500; 
+    @media screen and (max-width: 790px) {
+        width: 370px;
+        font-size: 40px;
     }
-}
-
-.banner_about{
-    background-image: linear-gradient(rgba(46, 45, 45, 0.4), rgba(42, 42, 42, 0.3)), url("../../../assets/img/background_about.jpg");
-    .banner_text {
-        display: none;
+    @media screen and (max-width: 500px) {
+        width: 275px;
+        font-size: 30px;
     }
 }
 
